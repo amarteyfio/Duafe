@@ -1,0 +1,150 @@
+<script>
+                $(document).ready(function() {
+            $("#submit").click(function() {
+                
+
+                // using serialize function of jQuery to get all values of form
+                //var serializedData = $("#add_prod").serialize();
+                 var formData = new FormData();
+
+                FormData.append("category",document.getElementById("category").value);
+                FormData.append("artist",document.getElementById("artist").value);
+                FormData.append("p_name",document.getElementById("p_name").value);
+                FormData.append("desc",document.getElementById("desc").value);
+                FormData.append("price",document.getElementById("price").value);
+                FormData.append("bid",document.getElementById("bid").value);
+                FormData.append("image",document.getElementById("image").files[0]);
+                
+
+                // Variable to hold request
+                var request;
+                // Fire off the request to process_registration_form.php
+                request = $.ajax({
+                    url: "http://localhost/Duafe/actions/add_product.php",
+                    type: "post",
+                    data: FormData,
+                    processData: false,
+                    contentType: false
+
+                });
+
+                //console.log(serializedData);
+
+                // Callback handler that will be called on success
+                request.done(function(jqXHR, textStatus, response) {
+                    
+                    console.log(response.responseText);
+                    //redirect if successful
+                    if(response.responseText == "Success"){
+
+                        document.getElementById('alert2').style.display = "block";
+                        $("#yes").html(response.responseText);
+                        
+                    }
+                    else
+                    {
+                      document.getElementById('alert').style.display = "block";
+                      $("#alert").html(response.responseText);
+                    }
+                    
+                });
+
+                // Callback handler that will be called on failure
+                request.fail(function(jqXHR, textStatus, errorThrown) {
+                    // Log the error to the console
+                    // show error
+                    $("#alert").html('There is some error while submitting the data');
+                    console.error(
+                        "The following error occurred: " +
+                        textStatus, errorThrown
+                    );
+                });
+
+                return false;
+
+            });
+        });
+        
+ </script>
+
+
+
+
+
+
+
+ <script>
+    /* const paymentForm = document.getElementById('paymentForm');
+paymentForm.addEventListener("submit", payWithPaystack, false); */
+    function payWithPaystack() {
+		var amt = <?php echo $total; ?>
+		var check = document.getElementById('amount').value;
+		var em = document.getElementById('email-address').value;
+		var nm = document.getElementById('name').value;
+
+		//SECURITY CHECKS
+		if(em == "")
+		{
+			document.getElementById('error').style.display = "block";
+            $("#error").html('Email is Required');
+			return false;
+		}
+		if(em == "")
+		{
+			document.getElementById('error').style.display = "block";
+            $("#error").html('Email is Required');
+			return false;
+		}
+
+		if(amt != check)
+		{
+			alert('Security Breach: Amount has been changed');
+			return false;
+		}
+		//SECURITY CHECKS
+        event.preventDefault();
+        let handler = PaystackPop.setup({
+
+            key: 'pk_test_110ba43e9a482172973111eb66e68e2306265c16', // Replace with your public key
+            email: document.getElementById("email-address").value,
+            amount: document.getElementById("amount").value * 100,
+            currency: 'GHS',
+            ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+            // label: "Optional string that replaces customer email"
+            onClose: function(){
+            alert('Window closed.');
+            },
+            callback: function(response){
+            let message = 'Payment complete! Reference: ' + response.reference;
+            alert(message);
+            // add_payment_detail_ctrl
+            email = document.getElementById("email-address").value;
+            amount = document.getElementById("amount").value;
+            var dataString = 'email='+ email + '&amount='+ amount;
+            if (response.status=='success'){
+            //alert("Please Fill All Fields");
+            
+            
+           
+            $.ajax({
+            type: "POST",
+            url: "../Actions/process_payment.php?amt="+amount,
+            data: dataString,
+            cache: false,
+            success: function(result){
+            // alert(result);
+            window.location.replace("confirmation.php");
+            // window.location = "pay"
+            }
+            });
+          }
+          
+
+            }
+            
+
+        });
+        handler.openIframe();
+    }
+	</script>
+    
