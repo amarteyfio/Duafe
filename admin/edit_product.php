@@ -322,7 +322,7 @@ $product_count = get_table_count_ctrl("products");
                 var request;
                 // Fire off the request to process_registration_form.php
                 request = $.ajax({
-                    url: "http://localhost/Duafe/actions/edit_product.php",
+                    url: "https://duafe-auction.herokuapp.com/actions/edit_product.php",
                     type: "post",
                     data: serializedData
 

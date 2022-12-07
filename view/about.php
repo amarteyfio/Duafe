@@ -253,9 +253,9 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 			</div>
 			<div class="col-md-6">
 				<h2 class="mt-40">About Our Shop</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim, accusantium repellat ex autem numquam iure officiis facere vitae itaque.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui vel cupiditate exercitationem, ea fuga est velit nulla culpa modi quis iste tempora non, suscipit repellendus labore voluptatem dicta amet?</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui vel cupiditate exercitationem, ea fuga est velit nulla culpa modi quis iste tempora non, suscipit repellendus labore voluptatem dicta amet?</p>
+				<p>Duafe is an innovative art auction business in Ghana that offers art enthusiasts the ability to bid on and purchase unique, high-quality pieces from</p>
+				<p>a curated selection of local artists. With Duafe, customers can participate in auctions or choose to immediately purchase their desired artwork at a fixed price. This flexibility allows customers to find the perfect piece</p>
+				<p>at a price that works for them. Additionally, Duafe's focus on supporting local artists and showcasing diverse perspectives sets it apart from other art auction businesses in Ghana. Choose Duafe for a unique and fulfilling art-buying experience</p>
 			</div>
 		</div>
 		<div class="row mt-40">

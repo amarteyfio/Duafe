@@ -120,7 +120,7 @@
                 var request;
                 // Fire off the request to process_registration_form.php
                 request = $.ajax({
-                    url: "http://localhost/Duafe/actions/register_process.php",
+                    url: "https://duafe-auction.herokuapp.com/actions/register_process.php",
                     type: "post",
                     data: serializedData
                 });

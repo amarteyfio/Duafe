@@ -127,7 +127,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
                 var request;
                 // Fire off the request to process_registration_form.php
                 request = $.ajax({
-                    url: "http://localhost/Duafe/actions/login_process.php",
+                    url: "https://duafe-auction.herokuapp.com/actions/login_process.php",
                     type: "post",
                     data: serializedData
                 });

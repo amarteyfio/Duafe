@@ -255,15 +255,15 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 			</div>
 			<div class="col-md-8">
 				<h4>Bidding</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas iusto, alias, tempora fuga quam eveniet neque excepturi aliquid. Eligendi, mollitia.</p>
+				<p>You can bid for an item on the single item page. If a bid is won the item cannot be removed from your cart. Also you cannot bid less than 10% of the current bid. All bids must be incremented by at least 10%. You cannot bid at the buy now price as well</p>
 				<h4>Cart</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam voluptatibus, incidunt similique nobis sint quisquam nam ab error consequuntur sit ullam ex eum exercitationem, excepturi explicabo beatae eos aspernatur odit ad perspiciatis, neque saepe magni enim. Maiores quia, quae sequi.</p>
+				<p>You may remove the items from the cart if they were selected with buy now. However, if you win an auction the item would repeatedly be added to your cart till you purchase it.</p>
 				<h4>Payments</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus repellat id, laboriosam ipsa repudiandae quisquam, suscipit officiis, praesentium itaque facilis distinctio dolorum. Velit reiciendis libero laudantium corporis, delectus impedit sunt.</p>
+				<p>Payments would be done using Paystack. Paystack supports Mobile Money as well as Credit and Debit Cards</p>
 				<h4>Returns & Exchanges</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam eaque nam, ab voluptas et debitis sint hic vel ratione dignissimos.</p>
+				<p>We have a strict no Refund Policy</p>
 				<h4>Privacy Policy</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae blanditiis quod saepe, inventore ipsum sint cum iste quae ratione nobis laborum minima autem totam similique, quia neque deleniti! Provident, suscipit.</p>
+				<p>Your Personal Data is secured against attacks as well as user activity. Personal data would not be sold under any condition.</p>
 			</div>
 		</div>
 	</div>

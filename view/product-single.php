@@ -543,7 +543,7 @@ $similar_products = select_similar_products_ctrl($product['category_id'], $produ
                 var request;
                 // Fire off the request to process_registration_form.php
                 request = $.ajax({
-                    url: "http://localhost/Duafe/actions/add_to_cart.php",
+                    url: "https://duafe-auction.herokuapp.com/actions/add_to_cart.php",
                     type: "post",
                     data: {product_id:product_id}
                 });
@@ -606,7 +606,7 @@ $similar_products = select_similar_products_ctrl($product['category_id'], $produ
                 var request;
                 // Fire off the request to process_registration_form.php
                 request = $.ajax({
-                    url: "http://localhost/Duafe/actions/place_bid.php",
+                    url: "https://duafe-auction.herokuapp.com/actions/place_bid.php",
                     type: "post",
                     data: {product_id:product_id,amount:amount}
                 });
