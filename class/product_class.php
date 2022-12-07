@@ -163,7 +163,7 @@
 
        function select_product_by_cat($cat_id)
        {
-         $sql = "SELECT * FROM products WHERE category_id = '$cat_id'";
+         $sql = "SELECT * FROM products WHERE category_id = '$cat_id' AND product_status = 0";
          $record = $this->db_fetch_all($sql);
          return $record;
        }
@@ -350,7 +350,7 @@
 
      function product_search($term)
      {
-        $sql = "SELECT * FROM `products` WHERE `keywords` LIKE '%{$term}%' ORDER BY 'keywords' AND product_status = 0";
+        $sql = "SELECT * FROM `products` WHERE product_status = 0  AND `keywords` LIKE '%{$term}%' ORDER BY 'keywords'";
         $results = $this->db_fetch_all($sql);
         return $results;
      }

@@ -361,6 +361,7 @@ $arrivals = get_new_products_ctrl();
 					<div class="product-content">
 						<h4><a href="view/product-single.php?product=<?php echo $row['product_name']; ?>"><?php echo $row['product_name']; ?></a></h4>
 						<p class="price" style="font:13px;">Starting From GHC <?php echo $row['current_bid']; ?></p>
+						<p><small>Ending on <?php echo $row['bid_end']; ?></small></p>
 					</div>
 				</div>
 			</div>

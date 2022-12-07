@@ -1,20 +1,4 @@
 <?php 
-//include core
-include "../settings/core.php";
-
-
-
-//include store controller
-include "../controller/store_controller.php";
-
-
-//include general controller
-include "../controller/general_controller.php";
-
-//include product controller
-include "../controller/product_controller.php";
-
-
 
 //products
 $products = select_available_products_ctrl();
@@ -37,12 +21,12 @@ foreach($products as $product):
             if(check_item_in_cart_ctrl($bid['product_id'],$bid['user_id']) == false){
 
                 add_to_cart_ctrl($bid['product_id'],$bid['user_id'],$bid['bid_amt']);
-                echo "Success";
+                echo "";
 
             }
             else
             {
-                echo "Already added";
+                echo "";
             }
 
             
@@ -55,7 +39,7 @@ foreach($products as $product):
         }
         else
         {
-            echo "Not yet time";
+            echo "";
         }
             
     }

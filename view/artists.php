@@ -5,8 +5,14 @@ include "../settings/core.php";
 //include product class
 include '../controller/product_controller.php';
 
-//include genera; controller
-include '../controller/general_controller.php';
+//include general controller
+include "../controller/general_controller.php";
+
+//includ store controller
+include "../controller/store_controller.php";
+
+//include auction checker
+include "../settings/auction_checker.php";
 
 /* FOR IF USER IS LOGGED IN */
 $message = '<li><a href="../login/login.php">Login</a></li>'; //Account Navabar dropdown list

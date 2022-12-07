@@ -11,14 +11,14 @@ define('DB_NAME', substr($cleardb_url["path"],1));
 
 $active_group = 'default';
 $query_builder = TRUE;
-/*/
 
 
-/* LOCAL HOST CREDENTIALS 
+
+/*/ LOCAL HOST CREDENTIALS 
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_NAME', 'duafe_db');
-*/
+
 
 ?>

@@ -54,7 +54,7 @@ foreach($products as $product):
         }
         else
         {
-            echo "Not yet time";
+            echo "";
         }
             
     }

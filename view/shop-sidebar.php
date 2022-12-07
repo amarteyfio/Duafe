@@ -8,6 +8,12 @@ include '../controller/product_controller.php';
 //include general controller
 include "../controller/general_controller.php";
 
+//includ store controller
+include "../controller/store_controller.php";
+
+//include auction checker
+include "../settings/auction_checker.php";
+
 /* FOR IF USER IS LOGGED IN */
 $message = '<li><a href="../login/login.php">Login</a></li>'; //Account Navabar dropdown list
 
@@ -254,10 +260,10 @@ $products = select_available_products_ctrl();
 					<h4 class="widget-title">Categories</h4>
 					<form method="post" action="#">
                         <select class="form-control">
-                            <option>Man</option>
-                            <option>Women</option>
-                            <option>Accessories</option>
-                            <option>Shoes</option>
+                            <option>Paintings</option>
+                            <option>Digital Art</option>
+                            <option>Crafts</option>
+                            
                         </select>
                     </form>
 	            </div>
@@ -280,6 +286,8 @@ $products = select_available_products_ctrl();
 					<div class="product-content">
 						<h4><a href="product-single.php?product=<?php echo $product['product_name'];?>"><?php echo $product['product_name']; ?></a></h4>
 						<p class="price">Starting From: <?php echo $product['current_bid']; ?></p>
+						<p><small>Ending on <?php echo $product['bid_end']; ?></small></p>
+						
 					</div>
 				</div>
 			</div>

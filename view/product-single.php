@@ -5,6 +5,15 @@ include "../settings/core.php";
 //include product class
 include '../controller/product_controller.php';
 
+//include general controller
+include "../controller/general_controller.php";
+
+//includ store controller
+include "../controller/store_controller.php";
+
+//include auction checker
+include "../settings/auction_checker.php";
+
 /* FOR IF USER IS LOGGED IN */
 $message = '<li><a href="../login/login.php">Login</a></li>'; //Account Navabar dropdown list
 
@@ -421,6 +430,7 @@ $similar_products = select_similar_products_ctrl($product['category_id'], $produ
 					<div class="product-content">
 						<h4><a href="product-single.php?product=<?php echo $prod['product_name']; ?>"><?php echo $prod['product_name']; ?></a></h4>
 						<p class="price">Starting from <?php echo $prod['current_bid']; ?></p>
+						<p><small>Ending on <?php echo $prod['bid_end']; ?></small></p>
 					</div>
 				</div>
 			</div>
