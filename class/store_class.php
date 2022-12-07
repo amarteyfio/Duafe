@@ -170,6 +170,13 @@
         $record = $this->db_fetch_one($sql);
         return $record;
     } 
+
+    //remove from all carts
+    function cart_remove_all($p_id)
+    {
+        $sql = "DELETE FROM cart WHERE p_id = $p_id";
+        return $this->db_query($sql);
+    }
     
     
 }

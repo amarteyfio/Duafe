@@ -38,6 +38,9 @@ foreach($products as $product):
 
                 add_to_cart_ctrl($bid['product_id'],$bid['user_id'],$bid['bid_amt']);
 
+                //remove from all other carts
+                cart_remove_all_ctrl($bid['product_id']);
+
             }
             else
             {

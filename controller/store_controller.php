@@ -114,6 +114,13 @@
       return $store->product_bids($p_id);
    }
 
+   //cart remove all controller
+   function cart_remove_all_ctrl($p_id)
+   {
+      $store = new store_class();
+      return $store->cart_remove_all($p_id);
+   }
+
 
 
 
