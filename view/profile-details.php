@@ -275,7 +275,8 @@ $user = select_user_ctrl($_SESSION['id']);
                 <li><span>Full Name:</span><?php echo $user['name']; ?></li>
                 <li><span>Country:</span>GHANA</li>
                 <li><span>Email:</span><?php echo $user['email']; ?></li>
-                <li><span>Role:</span><?php 
+                <li><span>Role:</span>
+				<?php 
 				if($_SESSION['user_role'] == 2){
 				echo "Customer";
 				}
@@ -283,7 +284,8 @@ $user = select_user_ctrl($_SESSION['id']);
 				{
 					echo  "Admin";
 				}
-				 ?></li>
+				?>
+				 </li>
                 
               </ul>
             </div>

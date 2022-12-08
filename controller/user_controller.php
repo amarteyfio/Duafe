@@ -7,7 +7,8 @@
  */
 
  //require user class
- require("../class/user_class.php");
+ set_include_path(dirname(__FILE__)."/../");
+ require("class/user_class.php");
 
 
 /* REGISTER USER CONTROLLER */

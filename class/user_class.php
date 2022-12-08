@@ -8,7 +8,8 @@
  */
  
  //include the database class
- include_once "../settings/db_class.php";
+ set_include_path(dirname(__FILE__)."/../");
+ include_once "settings/db_class.php";
 
  class user_class extends db_connection{
 
