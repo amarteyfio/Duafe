@@ -18,8 +18,13 @@ include "../controller/general_controller.php";
 //includ store controller
 include "../controller/store_controller.php";
 
+//imclude user controller
+include "../controller/user_controller.php";
+
 //include auction checker
 include "../settings/auction_checker.php";
+
+
 
 /* FOR IF USER IS LOGGED IN */
 $message = '<li><a href="../login/login.php">Login</a></li>'; //Account Navabar dropdown list
