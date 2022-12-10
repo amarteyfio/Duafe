@@ -32,6 +32,11 @@ foreach($products as $product):
             //get heighest bid for the product
             $bid = product_bids_ctrl($product['product_id']);
             
+            if(empty($bid))
+            {
+                exit;
+            }
+            
 
             //add item to cart of user if not added already
             if(check_item_in_cart_ctrl($bid['product_id'],$bid['user_id']) == false){
