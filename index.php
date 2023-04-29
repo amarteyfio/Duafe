@@ -1,4 +1,10 @@
 <?php
+// Turn on error reporting
+error_reporting(E_ALL);
+
+// Display errors on screen
+ini_set('display_errors', 'On');
+
 //include core
 include "settings/core.php";
 
